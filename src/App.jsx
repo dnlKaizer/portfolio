@@ -10,7 +10,13 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      width: '100%', 
+      overflowX: 'hidden'
+    }}>
       <Navbar />
 
       <main style={{ flex: 1 }}>

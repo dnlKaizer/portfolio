@@ -17,7 +17,7 @@ export default function Footer() {
       }}
     >
       <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-        
+
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem' }}>
           {/* Brand */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
@@ -48,8 +48,20 @@ export default function Footer() {
             <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-sub)' }} aria-label="LinkedIn">
               <Linkedin size={20} />
             </a>
-            <a href={`mailto:${PERSONAL_INFO.email}`} style={{ color: 'var(--text-sub)' }} aria-label="Email">
+            <a
+              href={`mailto:${PERSONAL_INFO.email}`}
+              style={{
+                color: 'var(--text-sub)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                wordBreak: 'break-all',     // Força a quebra de e-mails/links longos
+                overflowWrap: 'anywhere'    // Garante quebra em navegadores modernos
+              }}
+              aria-label="Email"
+            >
               <Mail size={20} />
+              <span>{PERSONAL_INFO.email}</span>
             </a>
           </div>
 
