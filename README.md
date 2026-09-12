@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio | Danilo Fróis Kaizer
+# 🌐 Portfólio Pessoal | Danilo Fróis Kaizer
 
 <p align="center">
   <a href="https://portfolio-danilo-kaizer.netlify.app/" target="_blank">
@@ -23,8 +23,7 @@ A aplicação foi planejada com foco em **performance, responsividade e clean UI
 
 O projeto foi construído utilizando as seguintes tecnologias e ferramentas:
 
-- **Frontend:** HTML5, CSS3, JavaScript / TypeScript (ou Angular / React)
-- **Styling & UI:** CSS Modules / Tailwind / Bootstrap (ajuste conforme aplicável)
+- **Frontend:** React, TypeScript, HTML5, CSS3, JavaScript
 - **Hospedagem & Deploy:** [Netlify](https://www.netlify.com/)
 - **Versionamento:** Git & GitHub
 
@@ -37,3 +36,14 @@ O projeto foi construído utilizando as seguintes tecnologias e ferramentas:
 - 📁 **Projetos em Destaque:** Módulos com descrição, tecnologias usadas e links diretos para os repositórios/demos.
 - 📬 **Contato:** Seção dedicada para envio de mensagens ou links para redes profissionais (LinkedIn, GitHub, E-mail).
 - 📱 **Design Responsivo:** Layout adaptável para smartphones, tablets e monitores de alta resolução.
+
+---
+
+## 📬 Contato
+
+Desenvolvido por **Danilo Fróis Kaizer** 👋
+
+- **Portfólio:** [portfolio-danilo-kaizer.netlify.app](https://portfolio-danilo-kaizer.netlify.app/)
+- **LinkedIn:** [linkedin.com/in/danilo-kaizer](https://www.linkedin.com/in/danilo-kaizer)
+- **GitHub:** [github.com/dnlKaizer](https://github.com/dnlKaizer)
+- **E-mail:** [danilokaizer@gmail.com](mailto:danilokaizer@gmail.com)
