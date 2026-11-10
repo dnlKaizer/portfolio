@@ -24,7 +24,7 @@ export default function Contact() {
             Entre em <span className="gradient-text">Contato</span>
           </h2>
           <p className="section-subtitle">
-            Estou disponível para entrevistas e oportunidades de <strong>Estágio em Ciência de Dados ou Desenvolvimento de Software</strong>.
+            Disponível para entrevistas e oportunidades em <strong>Engenharia de Software, Algoritmos e Ciência de Dados</strong>.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export default function Contact() {
                     {PERSONAL_INFO.email}
                   </span>
                   <div style={{ fontSize: '0.82rem', color: 'var(--text-sub)' }}>
-                    Disponível para contatos sobre vagas de estágio
+                    Disponível para oportunidades técnicas em Engenharia de Software, Algoritmos & Dados
                   </div>
                 </div>
               </div>

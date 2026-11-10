@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Rocket, ArrowUpRight } from 'lucide-react';
+import { Rocket, ArrowUpRight, Github } from 'lucide-react';
 import { PROJECTS } from '../data/portfolioData';
 import ProjectModal from './ProjectModal';
 
@@ -13,13 +13,13 @@ export default function Projects() {
         <div className="section-header" style={{ marginBottom: '3.5rem' }}>
           <div className="section-badge">
             <Rocket size={14} />
-            <span>Projetos & Estudos</span>
+            <span>Engenharia, Sistemas & Dados</span>
           </div>
           <h2 className="section-title">
             Projetos em <span className="gradient-text">Destaque</span>
           </h2>
           <p className="section-subtitle">
-            Projetos acadêmicos, pessoais e práticos desenvolvidos durante a graduação e atividades complementares no CEFET-MG.
+            Arquitetura de sistemas, compiladores, aplicações fullstack em tempo real, modelagem preditiva em Machine Learning e telemetria IoT.
           </p>
         </div>
 
@@ -47,8 +47,8 @@ export default function Projects() {
             >
               <div>
                 {/* Top Badge & Org */}
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                  <span className="section-badge" style={{ margin: 0, fontSize: '0.78rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <span className="section-badge" style={{ margin: 0, fontSize: '0.75rem' }}>
                     {project.category}
                   </span>
                   <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
@@ -82,7 +82,7 @@ export default function Projects() {
                   }}
                 >
                   <strong style={{ color: 'var(--color-cyan)', display: 'block', marginBottom: '2px' }}>
-                    Foco Prático:
+                    Destaque Técnico:
                   </strong>
                   {project.techHighlight}
                 </div>
@@ -91,19 +91,14 @@ export default function Projects() {
               <div>
                 {/* Tech Badges */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '1.25rem' }}>
-                  {project.models.slice(0, 4).map((tech, idx) => (
+                  {project.models.map((tech, idx) => (
                     <span key={idx} className="tech-badge">
                       {tech}
                     </span>
                   ))}
-                  {project.models.length > 4 && (
-                    <span className="tech-badge" style={{ color: 'var(--color-cyan)' }}>
-                      +{project.models.length - 4} mais
-                    </span>
-                  )}
                 </div>
 
-                {/* View Project Details CTA */}
+                {/* View Project Details & GitHub CTA */}
                 <div
                   style={{
                     display: 'flex',
@@ -111,13 +106,36 @@ export default function Projects() {
                     justifyContent: 'space-between',
                     paddingTop: '1rem',
                     borderTop: '1px solid var(--border-glass)',
-                    color: 'var(--color-cyan)',
-                    fontWeight: 600,
-                    fontSize: '0.9rem',
+                    gap: '0.75rem',
                   }}
                 >
-                  <span>Ver Detalhes do Projeto</span>
-                  <ArrowUpRight size={18} />
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.35rem',
+                      color: 'var(--color-cyan)',
+                      fontWeight: 600,
+                      fontSize: '0.9rem',
+                    }}
+                  >
+                    <span>Ver Detalhes</span>
+                    <ArrowUpRight size={18} />
+                  </div>
+
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="btn btn-outline"
+                      style={{ padding: '0.35rem 0.75rem', fontSize: '0.8rem', borderRadius: 'var(--radius-sm)' }}
+                    >
+                      <Github size={15} />
+                      <span>Repositório</span>
+                    </a>
+                  )}
                 </div>
               </div>
 

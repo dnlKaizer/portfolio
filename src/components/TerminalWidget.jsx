@@ -61,7 +61,8 @@ export default function TerminalWidget({ isOpen, onClose }) {
       case 'sbc':
         newHistory.push(
           { text: `🏆 ${PERSONAL_INFO.sbcMarathon}`, type: 'gold' },
-          { text: `Foco: Algoritmos Avançados, Teoria dos Grafos, Otimização e Programação Dinâmica.`, type: 'output' }
+          { text: `Métricas: 53º lugar na Final Nacional (65 equipes) | 147º lugar na 1ª Fase (965 equipes).`, type: 'output' },
+          { text: `Atuação: Resolução em Java dos 3 problemas de maior complexidade da equipe na Final Nacional.`, type: 'output' }
         );
         break;
 
@@ -74,9 +75,10 @@ export default function TerminalWidget({ isOpen, onClose }) {
 
       case 'skills':
         newHistory.push(
-          { text: `• Data Science & ML: Python, XGBoost, Random Forest, Scikit-learn, Feature Eng, Pandas`, type: 'output' },
-          { text: `• Backend & Systems: Java, Spring Boot, WebSockets, REST, SQL, Algoritmos SBC`, type: 'output' },
-          { text: `• Scientific & Dev: Matlab, TypeScript, Angular, React, Git, ESP32`, type: 'output' }
+          { text: `• Linguagens: Java, C/C++, Python, SQL, TypeScript/JavaScript`, type: 'output' },
+          { text: `• Engenharia de Software & Backend: Spring Boot, REST APIs, WebSockets/STOMP, MQTT, Maven, ANTLR4, OW2 ASM`, type: 'output' },
+          { text: `• Ciência de Dados & Computação Científica: Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, Matplotlib/Seaborn, MATLAB`, type: 'output' },
+          { text: `• Ferramentas, Infra & Ambientes: Git/GitHub, Linux/WSL, Docker (Básico), React, Angular`, type: 'output' }
         );
         break;
 

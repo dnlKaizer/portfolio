@@ -32,8 +32,8 @@ export default function ResumeModal({ isOpen, onClose }) {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <a
-              href="/Danilo_Frois_Kaizer_Curriculo.pdf"
-              download="Danilo_Frois_Kaizer_Curriculo.pdf"
+              href="/Curriculo_Danilo_Frois_Kaizer.pdf"
+              download="Curriculo_Danilo_Frois_Kaizer.pdf"
               className="btn btn-primary"
               style={{ padding: '0.45rem 0.9rem', fontSize: '0.85rem' }}
             >
@@ -137,8 +137,8 @@ export default function ResumeModal({ isOpen, onClose }) {
           {/* Footer PDF button */}
           <div style={{ textAlign: 'center', paddingTop: '1rem', borderTop: '1px solid var(--border-glass)' }}>
             <a
-              href="/Danilo_Frois_Kaizer_Curriculo.pdf"
-              download="Danilo_Frois_Kaizer_Curriculo.pdf"
+              href="/Curriculo_Danilo_Frois_Kaizer.pdf"
+              download="Curriculo_Danilo_Frois_Kaizer.pdf"
               className="btn btn-primary"
               style={{ padding: '0.75rem 2rem' }}
             >

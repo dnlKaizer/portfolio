@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Download, Github, Linkedin, Award, GraduationCap } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, Award, GraduationCap, Zap } from 'lucide-react';
 import { PERSONAL_INFO, STATS } from '../data/portfolioData';
 
 export default function Hero() {
@@ -24,26 +24,34 @@ export default function Hero() {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.5rem' }}>
               <div className="section-badge" style={{ margin: 0, background: 'rgba(6, 182, 212, 0.12)', borderColor: 'rgba(6, 182, 212, 0.4)', color: '#38bdf8' }}>
                 <GraduationCap size={15} />
-                <span>CEFET-MG • CR 94,5</span>
+                <span>CR: 94,5 / 100 (CEFET-MG)</span>
               </div>
 
               <div className="section-badge" style={{ margin: 0, background: 'rgba(245, 158, 11, 0.12)', borderColor: 'rgba(245, 158, 11, 0.4)', color: '#fbbf24' }}>
                 <Award size={15} />
-                <span>Finalista Maratona SBC 2026</span>
+                <span>Finalista Nacional (Maratona SBC 2026 - 53º/65)</span>
+              </div>
+
+              <div className="section-badge" style={{ margin: 0, background: 'rgba(139, 92, 246, 0.12)', borderColor: 'rgba(139, 92, 246, 0.4)', color: '#c084fc' }}>
+                <Zap size={15} />
+                <span>147º / 965 na 1ª Fase SBC (com menos de 2 meses de treino)</span>
               </div>
             </div>
 
             {/* Main Title */}
-            <h1 style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.6rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.25rem', color: '#ffffff' }}>
+            <h1 style={{ fontSize: 'clamp(2.1rem, 4.2vw, 3.4rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.25rem', color: '#ffffff' }}>
               Danilo Fróis Kaizer
               <span style={{ display: 'block', marginTop: '0.4rem' }} className="gradient-text">
-                Foco em Ciência de Dados
+                Engenharia de Software, Algoritmos & Dados
               </span>
             </h1>
 
-            {/* Subtitle / Bio summary */}
-            <p style={{ color: 'var(--text-sub)', fontSize: '1.1rem', maxWidth: '640px', marginBottom: '2.25rem', lineHeight: 1.7 }}>
-              Estudante de Engenharia de Computação no CEFET-MG com foco principal em <strong>Ciência de Dados</strong> e <strong>Análise de Dados</strong>. Buscando oportunidade de <strong>Estágio</strong> para aplicar meus conhecimentos em Python, Pandas, SQL e Aprendizado de Máquina.
+            {/* Subtitle & Professional Objective */}
+            <p style={{ color: '#f8fafc', fontSize: '1.12rem', fontWeight: 600, maxWidth: '660px', marginBottom: '0.85rem', lineHeight: 1.6 }}>
+              Estudante de Engenharia de Computação no CEFET-MG (CR 94,5/100) e Finalista Nacional da Maratona de Programação da SBC (2026).
+            </p>
+            <p style={{ color: 'var(--text-sub)', fontSize: '1.05rem', maxWidth: '660px', marginBottom: '2.25rem', lineHeight: 1.7 }}>
+              {PERSONAL_INFO.targetRole}
             </p>
 
             {/* CTA Action Buttons */}
@@ -74,7 +82,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Data Science Code Profile Card */}
+          {/* Right Column: Interactive Code Profile Card */}
           <div style={{ minWidth: 0, position: 'relative' }}>
             <div
               style={{
@@ -99,7 +107,7 @@ export default function Hero() {
                   <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#10b981' }} />
                 </div>
                 <div style={{ fontSize: '0.8rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
-                  danilo_data_science.py
+                  danilo_kaizer.py
                 </div>
               </div>
 
@@ -118,27 +126,26 @@ export default function Hero() {
                   whiteSpace: 'pre',
                 }}
               >
-                <span style={{ color: '#8b5cf6' }}>import</span> <span style={{ color: '#38bdf8' }}>pandas</span> <span style={{ color: '#8b5cf6' }}>as</span> <span style={{ color: '#38bdf8' }}>pd</span><br />
-                <span style={{ color: '#8b5cf6' }}>from</span> <span style={{ color: '#38bdf8' }}>sklearn.model_selection</span> <span style={{ color: '#8b5cf6' }}>import</span> <span style={{ color: '#38bdf8' }}>train_test_split</span><br /><br />
                 <span style={{ color: '#8b5cf6' }}>class</span> <span style={{ color: '#38bdf8' }}>DaniloKaizer</span>:<br />
                 {"    "}<span style={{ color: '#8b5cf6' }}>def</span> <span style={{ color: '#38bdf8' }}>__init__</span>(self):<br />
-                {"        "}self.foco = <span style={{ color: '#10b981' }}>"Ciência de Dados & Análise"</span><br />
-                {"        "}self.instituicao = <span style={{ color: '#10b981' }}>"CEFET-MG (CR 94.5)"</span><br />
-                {"        "}self.objetivo = <span style={{ color: '#10b981' }}>"Estágio em Ciência de Dados"</span><br /><br />
-                {"    "}<span style={{ color: '#8b5cf6' }}>def</span> <span style={{ color: '#38bdf8' }}>stack_principal</span>(self):<br />
-                {"        "}<span style={{ color: '#8b5cf6' }}>return</span> [<span style={{ color: '#38bdf8' }}>"Python"</span>, <span style={{ color: '#38bdf8' }}>"Pandas"</span>, <span style={{ color: '#38bdf8' }}>"Scikit-Learn"</span>, <span style={{ color: '#38bdf8' }}>"SQL"</span>]
+                {"        "}self.formacao = <span style={{ color: '#10b981' }}>"Engenharia de Computação - CEFET-MG"</span><br />
+                {"        "}self.cr = <span style={{ color: '#fbbf24' }}>94.5</span><br />
+                {"        "}self.foco = [<span style={{ color: '#10b981' }}>"Engenharia de Software"</span>, <span style={{ color: '#10b981' }}>"Algoritmos"</span>, <span style={{ color: '#10b981' }}>"Ciência de Dados"</span>]<br />
+                {"        "}self.maratona_sbc = <span style={{ color: '#10b981' }}>"Finalista Nacional 2026 (53º/65)"</span><br /><br />
+                {"    "}<span style={{ color: '#8b5cf6' }}>def</span> <span style={{ color: '#38bdf8' }}>stack_core</span>(self):<br />
+                {"        "}<span style={{ color: '#8b5cf6' }}>return</span> [<span style={{ color: '#38bdf8' }}>"Java"</span>, <span style={{ color: '#38bdf8' }}>"C/C++"</span>, <span style={{ color: '#38bdf8' }}>"Python"</span>, <span style={{ color: '#38bdf8' }}>"Spring Boot"</span>, <span style={{ color: '#38bdf8' }}>"SQL"</span>]
               </div>
 
               {/* Highlights */}
               <div style={{ marginTop: '1.25rem', paddingTop: '1rem', borderTop: '1px solid var(--border-glass)', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem' }}>
                 <div style={{ background: 'rgba(6, 182, 212, 0.08)', padding: '0.65rem 0.85rem', borderRadius: 'var(--radius-sm)', border: '1px solid rgba(6, 182, 212, 0.2)' }}>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Foco Principal</div>
-                  <div style={{ fontSize: '0.88rem', fontWeight: 600, color: 'var(--color-cyan)', marginTop: '2px' }}>Ciência de Dados</div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Posicionamento</div>
+                  <div style={{ fontSize: '0.88rem', fontWeight: 600, color: 'var(--color-cyan)', marginTop: '2px' }}>Software, Algoritmos & Dados</div>
                 </div>
 
                 <div style={{ background: 'rgba(245, 158, 11, 0.08)', padding: '0.65rem 0.85rem', borderRadius: 'var(--radius-sm)', border: '1px solid rgba(245, 158, 11, 0.2)' }}>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Objetivo</div>
-                  <div style={{ fontSize: '0.88rem', fontWeight: 600, color: 'var(--color-amber)', marginTop: '2px' }}>Estágio na Área</div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Maratona SBC 2026</div>
+                  <div style={{ fontSize: '0.88rem', fontWeight: 600, color: 'var(--color-amber)', marginTop: '2px' }}>Finalista Nacional (53º/65)</div>
                 </div>
               </div>
             </div>
@@ -153,12 +160,12 @@ export default function Hero() {
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
             gap: '1.25rem',
-            maxWidth: '650px',
+            maxWidth: '920px',
           }}
         >
           {STATS.map((stat, idx) => (
             <div key={idx} className="metric-box glass-card">
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.3rem' }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.3rem', flexWrap: 'wrap' }}>
                 <span className={`metric-value gradient-text-${stat.color === 'gold' ? 'gold' : 'cyan'}`}>
                   {stat.value}
                 </span>

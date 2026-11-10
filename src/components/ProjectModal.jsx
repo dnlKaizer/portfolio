@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Database, Rocket, CheckCircle2 } from 'lucide-react';
+import { X, Database, Rocket, CheckCircle2, Github, ExternalLink } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
   if (!project) return null;
@@ -21,7 +21,7 @@ export default function ProjectModal({ project, onClose }) {
           }}
         >
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.4rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.4rem', flexWrap: 'wrap' }}>
               <span className="section-badge" style={{ margin: 0 }}>
                 {project.category}
               </span>
@@ -91,10 +91,10 @@ export default function ProjectModal({ project, onClose }) {
           <div style={{ background: 'rgba(30, 41, 59, 0.5)', borderRadius: 'var(--radius-md)', padding: '1.25rem', border: '1px solid var(--border-glass)' }}>
             <h3 style={{ fontSize: '1.05rem', color: '#f8fafc', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <Rocket size={18} style={{ color: 'var(--color-amber)' }} />
-              <span>Objetivo do Projeto</span>
+              <span>Descrição & Escopo</span>
             </h3>
             <p style={{ color: 'var(--text-sub)', fontSize: '0.94rem', lineHeight: 1.65 }}>
-              {project.problem}
+              {project.summary}
             </p>
           </div>
 
@@ -102,7 +102,7 @@ export default function ProjectModal({ project, onClose }) {
           <div style={{ background: 'rgba(30, 41, 59, 0.5)', borderRadius: 'var(--radius-md)', padding: '1.25rem', border: '1px solid var(--border-glass)' }}>
             <h3 style={{ fontSize: '1.05rem', color: '#f8fafc', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <Database size={18} style={{ color: 'var(--color-cyan)' }} />
-              <span>Como está sendo Desenvolvido / Metodologia</span>
+              <span>Arquitetura & Implementação Técnica</span>
             </h3>
             <p style={{ color: 'var(--text-sub)', fontSize: '0.94rem', lineHeight: 1.65, marginBottom: '1rem' }}>
               {project.solution}
@@ -125,18 +125,34 @@ export default function ProjectModal({ project, onClose }) {
             )}
           </div>
 
-          {/* Technologies Badges */}
-          <div>
-            <h4 style={{ fontSize: '0.82rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.5rem' }}>
-              Tecnologias & Ferramentas
-            </h4>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
-              {project.models.map((tech, idx) => (
-                <span key={idx} className="tech-badge highlight" style={{ fontSize: '0.82rem', padding: '0.3rem 0.65rem' }}>
-                  {tech}
-                </span>
-              ))}
+          {/* Technologies Badges & Repository Link */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.25rem' }}>
+            <div>
+              <h4 style={{ fontSize: '0.82rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.5rem' }}>
+                Tecnologias & Ferramentas
+              </h4>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                {project.models.map((tech, idx) => (
+                  <span key={idx} className="tech-badge highlight" style={{ fontSize: '0.82rem', padding: '0.3rem 0.65rem' }}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
+
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+                style={{ padding: '0.65rem 1.25rem', fontSize: '0.9rem' }}
+              >
+                <Github size={18} />
+                <span>Ver Repositório no GitHub</span>
+                <ExternalLink size={15} />
+              </a>
+            )}
           </div>
 
         </div>

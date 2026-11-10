@@ -1,7 +1,9 @@
 export const PERSONAL_INFO = {
   name: "Danilo Fróis Kaizer",
-  title: "Estudante de Engenharia de Computação",
-  targetRole: "Buscando Estágio em Ciência de Dados & Análise de Dados",
+  headline: "Danilo Fróis Kaizer | Engenharia de Software, Algoritmos & Dados",
+  roleHighlight: "Engenharia de Software, Algoritmos & Dados",
+  title: "Estudante de Engenharia de Computação no CEFET-MG (CR 94,5/100) e Finalista Nacional da Maratona de Programação da SBC (2026).",
+  targetRole: "Estudante de Engenharia de Computação focado em Engenharia de Software, Algoritmos e Sistemas de Alta Confiabilidade, com sólida base matemática e experiência prática em Ciência de Dados.",
   institution: "CEFET-MG",
   degree: "Engenharia de Computação",
   cr: "94,5 / 100",
@@ -12,199 +14,167 @@ export const PERSONAL_INFO = {
   linkedinTag: "danilo-kaizer-83b7aa3aa",
   github: "https://github.com/dnlKaizer",
   githubTag: "dnlKaizer",
-  sbcMarathon: "Finalista Nacional da Maratona de Programação da SBC (2026)",
+  resumePdf: "/Curriculo_Danilo_Frois_Kaizer.pdf",
+  sbcMarathon: "Finalista Nacional da Maratona de Programação da SBC (2026) — 53º/65",
   summary: [
-    "Estudante de Engenharia de Computação no CEFET-MG com excelente desempenho acadêmico (CR 94,5/100), com foco principal em Ciência de Dados, Aprendizado de Máquina e Análise Exploratória, buscando oportunidade de estágio na área.",
-    "Combino facilidade com estatística e base matemática sólida (ex-monitor de Geometria Analítica e Álgebra Linear) com raciocínio lógico apurado em solução de problemas, comprovado pela classificação como Finalista Nacional da Maratona de Programação da SBC (2026).",
-    "Possuo experiência prática no uso de Python (Pandas, NumPy, Scikit-learn, Matplotlib) e SQL para manipulação e análise de dados, mantendo também conhecimentos complementares em desenvolvimento de software (Java/Spring Boot)."
+    "Estudante do 8º período de Engenharia de Computação no CEFET-MG com excelente desempenho acadêmico (CR 94,5/100). Sólida base em algoritmos, estruturas de dados avançadas e desenvolvimento de software robusto (Java, C++, Python, Spring Boot), aliada à experiência prática em Ciência de Dados e Machine Learning.",
+    "Finalista Nacional da Maratona de Programação da SBC 2026 (53º lugar entre os 65 finalistas do país), conquistando a primeira classificação do campus em 8 anos após apenas 4 meses de preparação intensiva autodidata. Na final, fui responsável pela resolução em Java dos 3 problemas de maior dificuldade da equipe (matemática, implementação e guloso).",
+    "Ex-monitor bolsista de Geometria Analítica e Álgebra Linear, combinando facilidade com fundamentos matemáticos e métodos quantitativos à engenharia de software pragmática, capaz de construir desde compiladores com geração direta de bytecode até arquiteturas IoT com mensageria MQTT e dashboards em tempo real."
   ]
 };
 
 export const STATS = [
-  { label: "CR no CEFET-MG", value: "94,5", suffix: "/100", color: "cyan" },
-  { label: "Maratona SBC 2026", value: "Finalista", suffix: "Nacional", color: "gold" }
+  { label: "CEFET-MG", value: "CR: 94,5", suffix: "/ 100", color: "cyan" },
+  { label: "Maratona SBC 2026 - 53º/65", value: "Finalista", suffix: "Nacional", color: "gold" },
+  { label: "com menos de 2 meses de treino", value: "147º / 965", suffix: "na 1ª Fase SBC", color: "cyan" }
 ];
 
 export const PROJECTS = [
   {
-    id: "sisu-ml",
-    title: "Pipeline de Classificação de Matrículas do SISU",
-    subtitle: "Projeto em Andamento (Em Equipe) | META CEFET-MG & Artigo Científico",
-    category: "Ciência de Dados & ML",
+    id: "comcet-compiler",
+    title: "Compilador MiniPascal (comcet)",
+    subtitle: "Compilador de 8 estágios com geração direta de bytecode JVM via OW2 ASM",
+    category: "Engenharia de Software & Compiladores",
     organization: "CEFET-MG",
-    period: "Em Andamento",
-    summary: "Projeto de Ciência de Dados desenvolvido em equipe para análise e predição de ingresso de candidatos no SISU. O trabalho será apresentado na META (Mostra Específica de Trabalhos e Aplicações) do CEFET-MG e submetido como artigo científico.",
-    techHighlight: "Responsável direto pela criação das features 'DISTANCIA_KM' (usando base externa do GitHub/IBGE com latitude e longitude) e 'PRESTIGIO_IES' / 'PRESTIGIO_CAMPUS' (baseadas na contagem de candidatos).",
-    models: ["Python", "Pandas", "Scikit-learn", "Machine Learning", "Feature Engineering", "Dados IBGE"],
+    period: "2026",
+    githubUrl: "https://github.com/dnlKaizer/compiler",
+    summary: "Construção de um compilador acadêmico completo para um subconjunto da linguagem Pascal desenvolvido em Java utilizando Maven. Implementa análise léxica e sintática via ANTLR4, construção e travessia de Árvore Sintática Abstrata (AST) utilizando o padrão de projeto Visitor para verificação de escopos e checagem semântica estrita, e geração direta de bytecode nativo da JVM através da biblioteca OW2 ASM.",
+    techHighlight: "Compilador de 8 estágios com análise léxica/sintática ANTLR4, AST com Visitor Pattern para checagem semântica estrita e emissão direta de bytecode JVM nativo via OW2 ASM.",
+    models: ["Java", "ANTLR4", "OW2 ASM", "JVM Bytecode", "Maven", "Visitor Pattern", "AST"],
     impactMetrics: [
-      { label: "Status do Projeto", value: "Em Andamento (Em Equipe)" },
-      { label: "Apresentação & Artigo", value: "META CEFET-MG" },
-      { label: "Contribuição Danilo", value: "Engenharia de Features" }
+      { label: "Pipeline de Compilação", value: "8 Estágios" },
+      { label: "Frontend & AST", value: "ANTLR4 + Visitor" },
+      { label: "Target Backend", value: "JVM Bytecode (ASM)" }
     ],
-    problem: "Analisar a base de dados de candidatos do SISU no CEFET-MG para identificar padrões e fatores associados à confirmação de matrícula e atratividade das vagas.",
-    solution: "Desenvolvimento colaborativo de um pipeline em Python. Atualmente a equipe está testando e avaliando diversos algoritmos de Machine Learning para selecionar o melhor modelo, com planos posteriores de comparar os resultados com arquiteturas de Deep Learning.",
+    problem: "Projetar e implementar um compilador completo para um subconjunto da linguagem Pascal capaz de realizar validações léxicas, sintáticas e semânticas rigorosas e gerar código executável diretamente na Java Virtual Machine (JVM).",
+    solution: "Arquitetura modular em 8 estágios construída em Java com Maven. Utiliza gramáticas ANTLR4 para parsing, padrão Visitor sobre a AST para tabela de símbolos e verificação de tipos/escopos, e a biblioteca OW2 ASM para geração direta de instruções de bytecode JVM (.class).",
     architecture: [
-      "Projeto acadêmico em equipe no CEFET-MG (em andamento)",
-      "Contribuição (Danilo): Criação da feature 'DISTANCIA_KM' integrando latitude/longitude de municípios a partir de base externa do IBGE (GitHub)",
-      "Contribuição (Danilo): Criação das features 'PRESTIGIO_IES' e 'PRESTIGIO_CAMPUS' calculando a contagem (count) total de candidatos concorrentes",
-      "Modelagem: Teste e comparação de múltiplos modelos de Aprendizado de Máquina para seleção da melhor abordagem (com comparação futura em Deep Learning)",
-      "Divulgação Científica: Apresentação na META (CEFET-MG) e submissão de artigo científico"
-    ]
-  },
-  {
-    id: "genai-ocr-etl",
-    title: "Automação de Leitura e Migração de Dados de Notas Fiscais",
-    subtitle: "Projeto Freelancer em Andamento | Python, Gemini (GenAI) & Pandas",
-    category: "Ciência de Dados & ML",
-    organization: "Freelancer",
-    period: "Em Andamento",
-    summary: "Projeto freelancer em andamento para limpeza e migração de estoque. Uso de Pandas para tratar o arquivo do sistema legado e integração com Gemini (Google GenAI) para extrair dados tabulares de notas fiscais e cruzar com os dados existentes.",
-    techHighlight: "Tratamento de planilhas legadas com Pandas/NumPy e extração de tabelas de notas fiscais de compra via modelo Gemini (Google GenAI) para preencher dados faltantes da migração.",
-    models: ["Python", "Pandas", "NumPy", "Gemini (GenAI)", "Extração de Dados", "ETL"],
-    impactMetrics: [
-      { label: "Status", value: "Em Andamento" },
-      { label: "IA Utilizada", value: "Gemini (GenAI)" },
-      { label: "Manipulação", value: "Pandas & NumPy" }
-    ],
-    problem: "A planilha exportada pelo sistema legado da empresa continha informações cruciais ausentes para a migração de estoque, exigindo a extração dessas informações diretamente de dezenas de notas fiscais de compra.",
-    solution: "Desenvolvimento de script em Python utilizando Pandas para limpeza inicial dos dados antigos e requisições ao Gemini (Google GenAI) para extrair os itens das notas fiscais em PDF/Imagem, realizando em seguida o cruzamento dos dados com Pandas e NumPy.",
-    architecture: [
-      "Limpeza e padronização da planilha exportada pelo sistema antigo com Pandas",
-      "Análise e extração de dados tabulares de notas fiscais utilizando a API do Gemini (Google GenAI)",
-      "Cruzamento e enriquecimento dos dados das notas com a planilha legada via Pandas e NumPy",
-      "Projeto em andamento para finalização da migração do estoque"
-    ]
-  },
-  {
-    id: "pibic-acos-gno",
-    title: "Iniciação Científica (PIBIC) - Processamento de Dados de Aços GNO",
-    subtitle: "Tratamento de Dados & Análise Estatística",
-    category: "Engenharia de Dados",
-    organization: "CEFET-MG",
-    period: "2025.2 - 2026.1",
-    summary: "Projeto de Iniciação Científica focado na automação de leitura, tratamento estatístico e visualização de dados experimentais de aços elásticos GNO.",
-    techHighlight: "Script em Matlab para consolidação automática e filtragem de ruídos em múltiplas planilhas de testes laboratoriais.",
-    models: ["Matlab", "Análise Estatística", "Tratamento de Dados", "Visualização de Dados"],
-    impactMetrics: [
-      { label: "Área", value: "Análise de Dados Científicos" },
-      { label: "Ferramenta", value: "Matlab" },
-      { label: "Formato", value: "Planilhas .xlsx" }
-    ],
-    problem: "Organizar e extrair métricas de dezenas de planilhas de testes laboratoriais de forma automatizada para análise científica.",
-    solution: "Criação de scripts que percorrem arquivos de medições físicas, removem outliers e geram gráficos consolidados para relatórios.",
-    architecture: [
-      "Leitura automatizada de múltiplos arquivos em diretórios",
-      "Filtragem e consolidação estatística",
-      "Geração de plots e gráficos explicativos"
-    ]
-  },
-  {
-    id: "esp32-mqtt",
-    title: "Monitor de Nível de Lixeiras – Dashboard MQTT",
-    subtitle: "Trabalho Prático de Sistemas Embarcados II | CEFET-MG",
-    category: "Desenvolvimento de Software",
-    organization: "CEFET-MG",
-    period: "2026.1",
-    summary: "Dashboard web desenvolvido como Progressive Web App (PWA) em React + TypeScript para monitoramento em tempo real do nível de lixeiras através de comunicação MQTT via WebSocket conectada a microcontroladores ESP32.",
-    techHighlight: "Conexão via WebSocket ao broker público HiveMQ, assinando tópicos MQTT em tempo real e exibindo dados lidos pelos sensores ultrassônicos HC-SR04 dos ESP32.",
-    models: ["React", "TypeScript", "ESP32", "MQTT.js", "HiveMQ", "WebSocket", "PWA"],
-    impactMetrics: [
-      { label: "Comunicação", value: "MQTT via WebSocket" },
-      { label: "Sensor / HW", value: "ESP32 + HC-SR04" },
-      { label: "Interface", value: "PWA (React + TS)" }
-    ],
-    problem: "Criar um dashboard web responsivo e instalável para monitorar em tempo real os níveis de lixeiras informados pelos sensores ESP32 sem depender de plataformas IoT fechadas.",
-    solution: "Desenvolvimento de interface em React com TypeScript integrada à biblioteca MQTT.js para escutar os tópicos do broker público HiveMQ e atualizar os estados dos níveis de lixeira em tempo real.",
-    architecture: [
-      "Leitura de distância via sensor ultrassônico HC-SR04 acoplado ao microcontrolador ESP32",
-      "Publicação das medições nos tópicos do broker público HiveMQ",
-      "Conexão WebSocket com MQTT.js no frontend React (TypeScript)",
-      "Configuração de suporte a Progressive Web App (PWA) para instalação nativa"
+      "Análise Léxica e Sintática automatizada com gramática formal definida no ANTLR4",
+      "Construção e travessia de Árvore Sintática Abstrata (AST) utilizando o padrão de projeto Visitor",
+      "Gerenciamento de tabela de símbolos, verificação de escopos e checagem semântica estrita de tipos",
+      "Geração direta de bytecode nativo da JVM (.class) através da biblioteca de manipulação de bytecode OW2 ASM",
+      "Gerenciamento de build, dependências e testes automatizados via Apache Maven"
     ]
   },
   {
     id: "chess-platform",
-    title: "Plataforma de Xadrez Online Multiplayer em Tempo Real",
-    subtitle: "Aplicação Robusta | Java (Spring Boot), Angular & WebSockets",
-    category: "Desenvolvimento de Software",
-    organization: "Pessoal",
+    title: "Plataforma de Xadrez Online Multiplayer",
+    subtitle: "Aplicação web fullstack em tempo real com Java, Spring Boot e WebSockets",
+    category: "Engenharia de Software Fullstack",
+    organization: "Projeto Pessoal",
     period: "2025",
-    summary: "Plataforma web de xadrez multiplayer completa jogável em tempo real por duas pessoas via código de sala. Inclui sistema de criação/ingresso por código, derrota por tempo, desistência, oferta de empate e feedbacks visuais detalhados.",
-    techHighlight: "Sistema multiplayer com criação de sala por código único, comunicação bidirecional por WebSockets, feedbacks visuais de lances/xeque/capturas e controle completo de eventos da partida (não hospedado em servidor público).",
+    githubUrl: "https://github.com/dnlKaizer/chess",
+    summary: "Sistema web completo para partidas de xadrez em tempo real entre dois jogadores com comunicação bidirecional de baixa sobrecarga via WebSockets. Implementa regras oficiais do xadrez, validação de movimentos no servidor, controle síncrono de relógios com derrota por tempo, sistema de salas privadas por código único e interface reativa construída em Angular.",
+    techHighlight: "Comunicação bidirecional de baixa latência via WebSockets/STOMP, motor de validação das regras oficiais no servidor (Spring Boot) e sincronização de relógios em tempo real.",
     models: ["Java", "Spring Boot", "Angular", "TypeScript", "WebSockets", "STOMP"],
     impactMetrics: [
-      { label: "Modo de Jogo", value: "Multiplayer via Código" },
-      { label: "Recursos Visuais", value: "Xeque, Capturas & Lances" },
-      { label: "Eventos", value: "Tempo, Desistência & Empate" }
+      { label: "Comunicação", value: "WebSockets / STOMP" },
+      { label: "Backend Engine", value: "Java & Spring Boot" },
+      { label: "Frontend Reativo", value: "Angular + TS" }
     ],
-    problem: "Desenvolver uma aplicação multiplayer robusta capaz de gerenciar todas as regras de xadrez, sincronizar partidas simultâneas sem atrasos e oferecer controle completo de tempo e eventos de partida.",
-    solution: "Arquitetura distribuída com backend em Java (Spring Boot) validando todas as regras e enviando atualizações via WebSockets para a interface reativa em Angular. O primeiro jogador cria a partida e recebe um código de sala, que o segundo jogador utiliza para se conectar.",
+    problem: "Desenvolver uma aplicação multiplayer em tempo real capaz de validar todas as regras oficiais do xadrez no servidor, sincronizar partidas simultâneas com baixa latência e gerenciar relógios e eventos de partida.",
+    solution: "Arquitetura fullstack com backend em Java (Spring Boot) responsável pelo motor de regras, controle de estado e mensageria WebSockets (STOMP), integrado a uma interface reativa em Angular + TypeScript com salas privadas por código único.",
     architecture: [
-      "Sistema de Sala por Código: Um jogador cria a partida, recebe um código de sala e o segundo jogador conecta-se inserindo o código",
-      "Eventos de Partida: Suporte completo a desistência, oferta/aceite de empate e derrota por estouro de tempo do relógio",
-      "Feedbacks Visuais no Tabuleiro: Destaque de jogadas possíveis, indicação de peças capturadas, marcação do último lance realizado e alerta visual de xeque",
-      "Histórico de Jogadas: Registro e descrição textual detalhada de todas as jogadas efetuadas na partida",
-      "Comunicação em Tempo Real: Atualização instantânea dos tabuleiros via WebSockets (STOMP), pronta para execução local (projeto não hospedado)"
+      "Comunicação bidirecional de baixa sobrecarga em tempo real via WebSockets e protocolo STOMP",
+      "Validação completa de movimentos e regras oficiais do xadrez no servidor (xeque, xeque-mate, roque, en passant, promoção)",
+      "Controle síncrono de relógios com detecção de derrota por tempo, desistência e oferta de empate",
+      "Sistema de salas privadas com pareamento instantâneo por código único",
+      "Interface reativa em Angular com destaques visuais de lances válidos, capturas, xeque e histórico completo de jogadas"
     ]
   },
   {
-    id: "n-queens-ga",
-    title: "Resolução do Problema das N-Rainhas via Algoritmo Genético",
-    subtitle: "Trabalho Acadêmico de Algoritmos",
-    category: "IA & Otimização",
-    organization: "CEFET-MG",
-    period: "2026.1",
-    summary: "Implementação de um algoritmo genético simples em Java para estudo de técnicas de busca e otimização no problema das N-Rainhas.",
-    techHighlight: "Estudo prático de operadores evolutivos de seleção e cruzamento em Java.",
-    models: ["Java", "Algoritmos Genéticos", "Lógica de Programação"],
+    id: "sisu-ml",
+    title: "Pipeline de Classificação de Matrículas do SiSU",
+    subtitle: "Modelagem preditiva e feature engineering sobre ~200 mil registros reais",
+    category: "Ciência de Dados & Machine Learning",
+    organization: "35ª META CEFET-MG",
+    period: "2025 - 2026",
+    summary: "Estudo comparativo de modelos de Machine Learning (Árvores de Decisão, Random Forest, SVM e XGBoost) para predizer a confirmação de matrícula de candidatos a partir de microdados do SiSU (~200 mil registros tratados a partir de 2 milhões). O XGBoost alcançou ROC-AUC de 0,79 e recall de 0,75 (validação cruzada 10-fold, desvio <= 0,005). Responsável pela engenharia de variáveis estratégicas (distância geográfica via IBGE e índice de demanda por campus), elevando o F1-score de 0,67 para 0,72 (+5 p.p.). Apresentado na 35ª META do CEFET-MG com artigo científico em fase de redação.",
+    techHighlight: "Engenharia de variáveis estratégicas (distância geográfica via IBGE e índice de demanda por campus) que elevou o F1-score de 0,67 para 0,72 (+5 p.p.), alcançando ROC-AUC de 0,79 com XGBoost.",
+    models: ["Python", "Pandas", "XGBoost", "Scikit-learn", "NumPy", "Matplotlib"],
     impactMetrics: [
-      { label: "Área", value: "Inteligência Artificial" },
-      { label: "Técnica", value: "Algoritmo Genético" },
-      { label: "Linguagem", value: "Java" }
+      { label: "XGBoost (10-fold CV)", value: "ROC-AUC 0,79" },
+      { label: "Ganho em F1-Score", value: "0,67 → 0,72 (+5 p.p.)" },
+      { label: "Volume de Dados", value: "~200 mil registros" }
     ],
-    problem: "Encontrar arranjos de N rainhas sem ataques em um tabuleiro.",
-    solution: "Aplicação de algoritmo genético com cálculo de colisões diagonais como função de aptidão.",
+    problem: "Predizer a confirmação de matrícula de candidatos a partir de microdados reais do SiSU (~200 mil registros filtrados e tratados a partir de uma base bruta de 2 milhões de registros), identificando os fatores determinantes da evasão inicial.",
+    solution: "Pipeline completo de preparação de dados, engenharia de atributos geográficos e institucionais e avaliação comparativa rigorosa via validação cruzada 10-fold entre Árvores de Decisão, Random Forest, SVM e XGBoost.",
     architecture: [
-      "Geração da população inicial de posições",
-      "Avaliação da função fitness",
-      "Cruzamento e mutação dos indivíduos"
+      "Tratamento e saneamento de ~200 mil registros reais a partir de 2 milhões de entradas dos microdados do SiSU",
+      "Feature Engineering (Danilo): Cálculo de distância geográfica entre município do candidato e campus via coordenadas do IBGE e criação do índice de demanda por campus",
+      "Impacto direto das novas features: elevação do F1-score de 0,67 para 0,72 (+5 pontos percentuais)",
+      "Modelagem comparativa (Árvores de Decisão, Random Forest, SVM e XGBoost) com validação cruzada 10-fold (desvio <= 0,005), atingindo ROC-AUC de 0,79 e recall de 0,75 no XGBoost",
+      "Trabalho apresentado na 35ª META do CEFET-MG com artigo científico em fase de redação"
+    ]
+  },
+  {
+    id: "esp32-mqtt",
+    title: "Sistema de Telemetria IoT com ESP32 & MQTT",
+    subtitle: "Monitoramento de sensores em tempo real com protocolo pub/sub e PWA em React",
+    category: "Sistemas Embarcados & IoT",
+    organization: "CEFET-MG",
+    period: "2026",
+    githubUrl: "https://github.com/dnlKaizer/esp32-mqtt",
+    summary: "Arquitetura de telemetria ponta a ponta para monitoramento contínuo de reservatórios/lixeiras utilizando microcontrolador ESP32 programado em C/C++ conectado a sensores ultrassônicos. Os dados são transmitidos em tempo real via protocolo pub/sub MQTT sobre WebSockets e consumidos por um Progressive Web App (PWA) responsivo desenvolvido em React + TypeScript.",
+    techHighlight: "Telemetria ponta a ponta integrando firmware em C/C++ no ESP32, mensageria pub/sub MQTT sobre WebSockets e dashboard PWA em React + TypeScript.",
+    models: ["ESP32", "C/C++", "MQTT", "WebSockets", "React", "TypeScript", "IoT"],
+    impactMetrics: [
+      { label: "Embarcados", value: "ESP32 (C/C++)" },
+      { label: "Mensageria", value: "MQTT / WebSockets" },
+      { label: "Frontend", value: "PWA React + TS" }
+    ],
+    problem: "Construir uma arquitetura de telemetria ponta a ponta de baixa latência para monitorar continuamente o nível de ocupação de reservatórios e lixeiras em tempo real.",
+    solution: "Integração entre hardware embarcado (ESP32 programado em C/C++ com sensores ultrassônicos), transmissão assíncrona via broker MQTT sobre WebSockets e visualização em tempo real em um Progressive Web App (PWA) construído com React e TypeScript.",
+    architecture: [
+      "Firmware embarcado em C/C++ no microcontrolador ESP32 para leitura contínua de sensores ultrassônicos",
+      "Transmissão de telemetria em tempo real utilizando arquitetura publish/subscribe com protocolo MQTT sobre WebSockets",
+      "Consumo de streams de dados e atualização reativa de estado em um Progressive Web App (PWA)",
+      "Interface responsiva e instalável desenvolvida em React + TypeScript com alertas visuais de capacidade"
     ]
   }
 ];
 
 export const SKILL_CATEGORIES = [
   {
-    id: "data-science",
-    title: "Ciência de Dados, ML & Análise de Dados (Foco Principal)",
-    icon: "BrainCircuit",
-    description: "Principais ferramentas e bibliotecas estudadas para manipulação e análise de dados.",
-    skills: [
-      { name: "Python", tags: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"] },
-      { name: "Análise Exploratória & EDA", tags: ["Limpeza de Dados", "Estatística Descritiva", "Visualização Tabular"] },
-      { name: "Machine Learning (Conceitos)", tags: ["Regressão", "Classificação", "Random Forest", "XGBoost"] },
-      { name: "SQL & Bancos de Dados", tags: ["Consultas SQL", "JOINs", "PostgreSQL", "MySQL"] }
-    ]
-  },
-  {
-    id: "data-engineering",
-    title: "Processamento de Dados & Computação Científica",
-    icon: "Layers",
-    description: "Tratamento de dados, automação de scripts e ferramentas acadêmicas.",
-    skills: [
-      { name: "Tratamento & Extração com GenAI", tags: ["Pandas", "NumPy", "Gemini (GenAI)", "Arquivos .xlsx / CSV"] },
-      { name: "Matlab", tags: ["Scripts Acadêmicos", "Gráficos Estatísticos", "Processamento de Dados"] }
-    ]
-  },
-  {
-    id: "software-eng",
-    title: "Desenvolvimento de Software & Algoritmos (Secundário)",
+    id: "programming-languages",
+    title: "Linguagens de Programação",
     icon: "Code2",
-    description: "Linguagens de programação e lógica para suporte no desenvolvimento.",
+    description: "Domínio de linguagens fortemente tipadas, programação competitiva, sistemas e ciência de dados.",
     skills: [
-      { name: "Java", tags: ["Orientação a Objetos", "Spring Boot Básico", "Estruturas de Dados", "Maratona SBC"] },
-      { name: "IoT & Web (ESP32 / React)", tags: ["ESP32", "MQTT.js", "WebSocket", "React / TypeScript", "PWA"] },
-      { name: "Algoritmos & Lógica", tags: ["Resolução de Problemas", "Teoria dos Grafos", "Programação Dinâmica"] },
-      { name: "Git & Versionamento", tags: ["Git Flow", "Commits", "GitHub"] }
+      { name: "Java", tags: ["Core", "POO", "Bytecode JVM"] },
+      { name: "C / C++", tags: ["Algoritmos competitivos", "Ponteiros", "Sistemas embarcados"] },
+      { name: "Python", tags: ["Automação", "Pandas", "ML"] },
+      { name: "SQL", tags: ["Consultas analíticas", "Agregações", "Modelagem relacional"] },
+      { name: "TypeScript / JavaScript", tags: ["Frontend moderno", "Angular", "React"] }
+    ]
+  },
+  {
+    id: "software-engineering",
+    title: "Engenharia de Software & Backend",
+    icon: "Layers",
+    description: "Desenvolvimento de sistemas distribuídos, comunicação em tempo real e construção de compiladores.",
+    skills: [
+      { name: "Backend & Mensageria em Tempo Real", tags: ["Spring Boot", "REST APIs", "WebSockets / STOMP", "MQTT"] },
+      { name: "Compiladores, Build & Bytecode", tags: ["Maven", "ANTLR4", "OW2 ASM"] }
+    ]
+  },
+  {
+    id: "data-science",
+    title: "Ciência de Dados & Computação Científica",
+    icon: "BrainCircuit",
+    description: "Modelagem preditiva, engenharia de atributos, validação estatística e computação numérica.",
+    skills: [
+      { name: "Machine Learning & Análise de Dados", tags: ["Pandas", "NumPy", "Scikit-learn", "XGBoost", "LightGBM"] },
+      { name: "Visualização & Computação Científica", tags: ["Matplotlib / Seaborn", "MATLAB"] }
+    ]
+  },
+  {
+    id: "tools-infra",
+    title: "Ferramentas, Infra & Ambientes",
+    icon: "Terminal",
+    description: "Controle de versão, ambientes Unix, conteinerização e frameworks web modernos.",
+    skills: [
+      { name: "Infraestrutura, DevOps & Web", tags: ["Git / GitHub", "Linux / WSL", "Docker (Básico)", "React", "Angular"] }
     ]
   }
 ];
@@ -212,30 +182,31 @@ export const SKILL_CATEGORIES = [
 export const ACHIEVEMENTS = [
   {
     id: "sbc-marathon",
-    title: "Finalista Nacional - Maratona de Programação da SBC (2026)",
-    type: "Competição Acadêmica de Programação",
-    date: "2026",
-    badge: "🏆 Finalista Nacional",
+    title: "Finalista Nacional da Maratona de Programação SBC (2026)",
+    type: "Programação Competitiva & Algoritmos",
+    institution: "SBC",
+    date: "53º lugar na Final Nacional (65 equipes) | 147º lugar na 1ª Fase (965 equipes)",
+    badge: "🏆 Finalista Nacional (53º/65)",
     badgeColor: "gold",
-    description: "Classificação para a final nacional da Maratona de Programação da SBC com a equipe do CEFET-MG.",
+    description: "53º lugar na Final Nacional (entre as 65 melhores equipes do Brasil) | 147º lugar na 1ª Fase (entre 965 equipes).",
     bullets: [
-      "Resolução de problemas de lógica, matemática e estruturas de dados sob limite de tempo.",
-      "Prática intensiva de algoritmos e resolução de problemas em Java.",
-      "Trabalho em equipe e raciocínio lógico focado."
+      "Métricas: 53º lugar na Final Nacional (entre as 65 melhores equipes do Brasil) | 147º lugar na 1ª Fase (entre 965 equipes).",
+      "Contexto: Preparação autodidata com menos de 2 meses de treino até a 1ª fase e menos de 4 meses até a final nacional, quebrando um hiato de 8 anos do CEFET-MG Campus Timóteo (4ª participação da história do campus).",
+      "Atuação: Responsável direto pela resolução em Java dos 3 problemas de maior complexidade da equipe na prova da Final Nacional."
     ]
   },
   {
     id: "cefet-degree",
-    title: "Bacharelado em Engenharia de Computação",
-    type: "Graduação em Andamento",
+    title: "Coeficiente de Rendimento (CR) 94,5 / 100 — CEFET-MG",
+    type: "Bacharelado em Engenharia de Computação",
     institution: "CEFET-MG",
-    date: "Previsão de Formatura: 12/2027",
+    date: "8º Período • Previsão de Formatura: 12/2027",
     badge: "🎓 CR 94,5 / 100",
     badgeColor: "cyan",
-    description: "Estudante de Engenharia de Computação com excelente desempenho acadêmico (CR 94,5/100).",
+    description: "Desempenho acadêmico consistente nas disciplinas de Engenharia de Computação (Algoritmos e Estruturas de Dados, Cálculo, Álgebra Linear, Sistemas Embarcados e Compiladores).",
     bullets: [
-      "Dedicação às disciplinas de algoritmos, cálculo, álgebra linear e sistemas de computação.",
-      "Participação em projetos acadêmicos e atividades complementares."
+      "Destaque: Desempenho acadêmico consistente nas disciplinas de Engenharia de Computação (Algoritmos e Estruturas de Dados, Cálculo, Álgebra Linear, Sistemas Embarcados e Compiladores).",
+      "Atividades: Monitor bolsista de Geometria Analítica e Álgebra Linear durante 2 semestres consecutivos e bolsista de Iniciação Científica (PIBIC)."
     ]
   }
 ];

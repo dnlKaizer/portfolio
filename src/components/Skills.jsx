@@ -1,13 +1,14 @@
 import React from 'react';
 import { SKILL_CATEGORIES } from '../data/portfolioData';
-import { BrainCircuit, Code2, Layers, Sparkles, CheckCircle2 } from 'lucide-react';
+import { BrainCircuit, Code2, Layers, Terminal, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export default function Skills() {
   const getCategoryIcon = (iconName) => {
     switch (iconName) {
-      case 'BrainCircuit': return <BrainCircuit size={24} className="gradient-text-cyan" />;
-      case 'Code2': return <Code2 size={24} style={{ color: 'var(--color-violet)' }} />;
-      case 'Layers': return <Layers size={24} style={{ color: 'var(--color-emerald)' }} />;
+      case 'Code2': return <Code2 size={24} className="gradient-text-cyan" />;
+      case 'Layers': return <Layers size={24} style={{ color: 'var(--color-violet)' }} />;
+      case 'BrainCircuit': return <BrainCircuit size={24} style={{ color: 'var(--color-emerald)' }} />;
+      case 'Terminal': return <Terminal size={24} style={{ color: 'var(--color-amber)' }} />;
       default: return <Sparkles size={24} />;
     }
   };
@@ -19,13 +20,13 @@ export default function Skills() {
         <div className="section-header">
           <div className="section-badge">
             <Layers size={14} />
-            <span>Ferramentas & Linguagens</span>
+            <span>Stack & Ferramentas</span>
           </div>
           <h2 className="section-title">
             Conhecimentos <span className="gradient-text">Técnicos</span>
           </h2>
           <p className="section-subtitle">
-            Hard skills, linguagens de programação e tecnologias estudadas e aplicadas em projetos.
+            Arquitetura de software, algoritmos competitivos, ciência de dados e ferramentas de desenvolvimento.
           </p>
         </div>
 

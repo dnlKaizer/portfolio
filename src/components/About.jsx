@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrainCircuit, Calculator, Award, Sparkles, GraduationCap } from 'lucide-react';
+import { Code2, Calculator, Award, Sparkles } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 export default function About() {
@@ -13,10 +13,10 @@ export default function About() {
             <span>Sobre Mim</span>
           </div>
           <h2 className="section-title">
-            Perfil Acadêmico & <span className="gradient-text">Motivação Profissional</span>
+            Perfil Técnico & <span className="gradient-text">Engenharia de Software</span>
           </h2>
           <p className="section-subtitle">
-            Estudante de Engenharia de Computação no CEFET-MG, buscando oportunidade de estágio para colocar em prática meus estudos em Ciência de Dados e Desenvolvimento de Software.
+            {PERSONAL_INFO.targetRole}
           </p>
         </div>
 
@@ -49,14 +49,14 @@ export default function About() {
             
             <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
               <div style={{ background: 'rgba(6, 182, 212, 0.15)', color: 'var(--color-cyan)', padding: '0.85rem', borderRadius: 'var(--radius-md)' }}>
-                <BrainCircuit size={26} />
+                <Code2 size={26} />
               </div>
               <div>
                 <h3 style={{ fontSize: '1.15rem', marginBottom: '0.4rem', color: '#fff' }}>
-                  Ciência de Dados & Machine Learning
+                  Engenharia de Software & Sistemas
                 </h3>
                 <p style={{ color: 'var(--text-sub)', fontSize: '0.92rem', lineHeight: 1.6 }}>
-                  Estudo prático de análise exploratória, tratamento de dados com Pandas e aplicação de algoritmos de aprendizado de máquina com Scikit-learn.
+                  Desenvolvimento de compiladores com geração direta de bytecode JVM (ANTLR4, OW2 ASM), aplicações fullstack em tempo real com Java, Spring Boot e WebSockets, e telemetria IoT.
                 </p>
               </div>
             </div>
@@ -67,10 +67,10 @@ export default function About() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.15rem', marginBottom: '0.4rem', color: '#fff' }}>
-                  Lógica de Programação & Maratona SBC
+                  Algoritmos & Programação Competitiva
                 </h3>
                 <p style={{ color: 'var(--text-sub)', fontSize: '0.92rem', lineHeight: 1.6 }}>
-                  Finalista da Maratona de Programação da SBC 2026. Resolução de problemas de lógica, grafos e estruturas de dados em Java.
+                  Finalista Nacional da Maratona SBC 2026 (53º/65 no Brasil | 147º/965 na 1ª Fase), responsável pela resolução em Java dos 3 problemas mais difíceis da equipe na final.
                 </p>
               </div>
             </div>
@@ -81,10 +81,10 @@ export default function About() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.15rem', marginBottom: '0.4rem', color: '#fff' }}>
-                  Base em Matemática & Monitoria
+                  Base Matemática & Ciência de Dados
                 </h3>
                 <p style={{ color: 'var(--text-sub)', fontSize: '0.92rem', lineHeight: 1.6 }}>
-                  Atuação como monitor bolsista de Geometria Analítica e Álgebra Linear no CEFET-MG, com boa facilidade em raciocínio quantitativo e matrizes.
+                  Ex-monitor bolsista de Geometria Analítica e Álgebra Linear e pesquisador em Machine Learning, com engenharia de variáveis e modelagem preditiva sobre ~200 mil registros do SiSU.
                 </p>
               </div>
             </div>
